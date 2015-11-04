@@ -1,0 +1,30 @@
+#log{
+	height: 200px;
+	width: 200px;
+}
+
+#prompt{
+	width: 180px;
+}
+
+.container{
+	height: 400px;
+	background-color: grey;
+	border: 2px solid black;
+}
+
+body{
+	background-color: #AD090B;
+}
+
+
+
+
+
+
+
+
+
+.image{
+	background-image: url("shylock.jpeg");
+}// not sure why that isn't working
