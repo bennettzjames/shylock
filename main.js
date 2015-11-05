@@ -10,18 +10,23 @@ var borrower = {
 	Bassanio: 0.
 }
 
+var number = parseInt($prompt)
+//need to define number but not sure how
 
 var shylock = {
 	purse: 10000,
 	process: function(input) {
 		if (input === 'purse') {
 			logOutput("ShylockBot pulls out his purse which contains " + shylock.purse + " ducats", 'action');
-		} else {
-			logOutput("I\'m confused by", 'quote')
 		}
 		//below is part 2
-		if (input === 'loan'){
-			logOutput("Shylock gives " + borrower + input + " ducats")
+		else if (input === 'loan' + borrower + number + 'ducats'){
+			logOutput("Shylock gives " + borrower + loan + " ducats", 'action')
+		} else if (input === 'fuck ducats'){
+			logOutput("GET MONEY", 'action')
+		}
+		else { 
+			logOutput("I\'m really confused", 'quote')
 		}
 
 	}
@@ -59,9 +64,38 @@ var handleInput = function(event){
 	}
 }
 
+// var loan = function(event){
+// 	if (event.which === 13){
+// 		var input = $prompt.val()
+// 		shylock.purse -= parseFloat();
+// 		logOutput(input, 'action');
+// 		shylock.process(input);
+// 	}
+// }
+
+//what I did above did not work
+
+
+
 var loan = function(event){
-	if ()
+	$prompt.val();
+ 
+ 	switch (loan) {
+ 		case "Antonio":
+ 		text = "Shylock gives Antonio " + number + " ducats";
+ 		break;
+
+ 		case "Bassanio":
+ 		text = "Shylock gives Bassanio " + number + " ducats";
+ 		break;
+
+ 		default:
+ 		text = "Dammit, I\'m still confused."
+ 	}
 }
+
+// that didn't work either
+
 
 //part 2
 
@@ -94,6 +128,9 @@ $(document).ready(function(){
 	//those just select the prompt and log using id's
 
 	$prompt.on('keypress', handleInput);
+
+
+	//when i call the event listener for my loan function, it messes up the handle input function
 
 	//that puts the eventlistener onto our handleInput function
 });
