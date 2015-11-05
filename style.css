@@ -17,7 +17,13 @@ body{
 	background-color: #AD090B;
 }
 
+.command{
+	font-weight: bold;
+}
 
+.action{
+	font-style: italic;
+}
 
 
 
